@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans:wght@300;500&family=Karla:wght@400;700&family=League+Spartan:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap");
+body {
+  font-family: "League Spartan", sans-serif;
+  -ms-overflow-style: none;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #20bfa9;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.4s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* -------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.field-name,
+.field-email,
+.field-password,
+.field-finish {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 450px) {
+  .field-name,
+  .field-email,
+  .field-password,
+  .field-finish {
+    width: 300px;
+  }
+}
+.field-finish {
+  justify-content: center;
+  color: #008050;
+  font-weight: bold;
+}
+.field-finish i {
+  font-size: 20px;
+}
+.field-name input,
+.field-email input,
+.field-password input,
+.field-finish input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+i {
+  padding: 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+div.innactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+}
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(10deg);
+    -webkit-transform: translate(-50%, -50%) rotate(10deg);
+    -moz-transform: translate(-50%, -50%) rotate(10deg);
+    -ms-transform: translate(-50%, -50%) rotate(10deg);
+    -o-transform: translate(-50%, -50%) rotate(10deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-10deg);
+    -moz-transform: translate(-50%, -50%) rotate(-10deg);
+    -ms-transform: translate(-50%, -50%) rotate(-10deg);
+    -o-transform: translate(-50%, -50%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
